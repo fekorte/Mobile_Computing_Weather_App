@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">WetterApp</string>
+    <string name="search_location">Search</string>
+    <string name="enter_location">Enter location name</string>
+    <string name="location_name">Location name</string>
+    <string name="title_activity_test">TestActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="list_location">Location name</string>
+    <string name="list_degree">%.0f C°</string>
+    <string name="list_country_description">%1$s %2$s</string>
+    <string name="current_location">Current location</string>
+</resources>

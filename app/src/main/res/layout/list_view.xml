@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blur_background">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/goBack"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/searchLocationButton"
+        android:layout_width="103dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/disabledButtonColor"
+        android:minWidth="100dp"
+        android:minHeight="48dp"
+        android:onClick="onSearch"
+        android:text="@string/search_location"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#97252732"
+        android:textColorLink="#97252732"
+        android:textSize="16sp"
+        app:iconTint="@color/material_dynamic_primary60"
+        app:layout_constraintBaseline_toBaselineOf="@+id/enterLocationName"
+        app:layout_constraintBottom_toTopOf="@+id/locationList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/enterLocationName"
+        app:layout_constraintTop_toBottomOf="@+id/goBack"
+        app:rippleColor="@color/design_default_color_secondary_variant"
+        android:enabled="false" />
+
+    <EditText
+        android:id="@+id/enterLocationName"
+        android:layout_width="266dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/enter_location"
+        android:imeOptions="actionGo"
+        android:inputType="text"
+        android:textColor="#CB1D1E27"
+        android:textColorHighlight="#101F70"
+        android:textColorHint="#CB1D1E27"
+        android:textColorLink="#101F70"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/locationList"
+        app:layout_constraintEnd_toStartOf="@+id/searchLocationButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goBack" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/locationList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterLocationName"
+        tools:listitem="@layout/location_list_item" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabGetCurrentLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:src="@drawable/target"
+        app:backgroundTint="@color/white"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.FloatingActionButton"
+        app:elevation="8dp"
+        app:pressedTranslationZ="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/light_grey" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
